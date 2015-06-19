@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en"  class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>renrentou</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<script src="/js/jquery-1.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.refineslide.js"></script>
+	<script>
+	$(function () {
+		var $upper = $('#upper');
+
+		$('#images').refineSlide({
+			transition : 'random',
+			onInit : function () {
+				var slider = this.slider,
+				$triggers = $('.translist').find('> li > a');
+			}
+		});
+	});
+	</script>
+	<script src="/js/appear.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.per').each(function() {
+			var s = $(this).text();
+			$(this).text(parseInt(s));
+		});
+	})
+	</script>
+	<script src="/js/invest.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="renren-index">
+		<div class="login-in md-modal md-effect-18" id="modal-18">
+			<div class="md-content">
+				<div class="login-box clearfix">
+					<div class="login-top">
+						<span>加入人人投，体验最酷的店铺投融资方式！</span>
+						<a class="md-close">
+							<img src="/img/close-img.png"/>
+						</a>
+					</div>
+					<div class="login-left">
+						<form action="/loginpage" method="post">
+							<div class="input-box">
+								<img class="input-img" src="/img/email.png"/>
+								<input class="input-w280" type="text" name="emails" placeholder="邮箱/手机号"/>
+							</div>
+							<div class="input-box">
+								<img class="input-img" src="/img/lock.png"/>
+								<input class="input-w280" type="password" name="password" placeholder="输入密码">
+							</div>
+							<div class="identify">
+								<input class="id-code input-w100" type="text" placeholder="输入验证码"/>
+								<img class="code" src="/img/code.png"/>
+								<a href="">看不清，换一张</a>
+							</div>
+							<div class="login-imme">
+								<input type="submit" class="btn btn-w100 btn-red fl" value="立即登录"/>
+								<a class="btn btn-w100 btn-red forget fl md-trigger" data-modal="modal-13">忘记密码</a>
+							</div>
+						</form>
+					</div>
+					<div class="login-right">
+						<p>没有账号？</p>
+						<p>欢迎注册加入我们！</p>
+						<a href="register.html">快速注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="findPassword md-modal md-effect-13" id="modal-13">
+			<div class="find-box clearfix">
+				<div class="title">
+					<span class="fl">找回密码</span>
+					<span class="fr md-close">X</span>
+				</div>
+				<form action="findPassword" method="post">
+					<p><label>注册邮箱：</label><input type="text" class="input-w200" id="useremail" name="useremail"></p>
+					<p><label>重置密码:</label><input type="password" class="input-w200" id="userpsd" name="userpsd"></p>
+					<p><input type="submit" class="btn btn-w100 btn-orange" value="提交" id="findPsd"></p>
+				</form>
+			</div>
+		</div>
+		<div class="container">
+			<header>
+				<div class="header-wrapper">
+					<div class="logo-wrapper fl">
+						<a href="/">
+						</a>
+					</div>
+					<div class="nav fl">
+						<span class="country">济南</span>
+						<a href="/city/" class="change-city">
+							<span>[切换城市]</span>
+						</a>
+						<a href="/login" class="inve-pub-project">投资项目</a>
+						<a href="/login" class="inve-pub-project">发布项目</a>
+						<a href="/" class="integration">积分商城</a>
+						<form class="search-project" action="/searchProject" method="post">
+							<input type="text" class="input-w180 search-text fl" placeholder="找项目" name="keyValue">
+							<input type="submit" class="submit" value="搜索">
+						</form>
+					</div>
+					<div class="register fr">
+						<a href="/register">注册</a>
+						<a class="md-trigger md-setperspective" data-modal="modal-18">登录</a>
+					</div>
+				</div>
+			</header>
+			<div class="navLoop">
+			<div class="group">
+				<ul id="images" class="rs-slider">
+					<li class="group"> <a href="#"> <img src="img/loop1.jpg" alt="" /> </a>
+					</li>
+					<li class="group"> <a href="#" class="slide-parent"> <img src="img/loop2.jpg" alt="" /> </a>
+					</li>
+					<li class="group"> <a href="#" class="slide-parent"> <img src="img/loop3.jpg" alt="" /> </a>
+					</li>
+					<li class="group"><a href="#" class="slide-parent"> <img src="img/loop4.png" alt="" /> </a>
+						<li class="group"><a href="#" class="slide-parent"> <img src="img/loop5.png" alt="" /> </a></li>
+						<li class="group"><a href="#" class="slide-parent"> <img src="img/loop6.png" alt="" /> </a></li>
+						<li class="group"><a href="#" class="slide-parent"> <img src="img/loop7.jpg" alt="" /> </a></li>
+					</ul>
+				</div>             
+			</div>
+			<!--
+			<div class="active-all clear">
+				<div class="project-num fl">
+					<span>众筹项目总数：</span>
+					<p>185</p>
+				</div>
+				<div class="people-num fl">
+					<span>会员数：</span>
+					<p>523,004</p>
+				</div>
+				<div class="buy-money fl">
+					<span>预约认购众筹项目总金额：</span>
+					<p>4,145,345</p>
+				</div>
+				<div class="totle-money fl">
+					<span>成功众筹项目总金额：</span>
+					<p>333,333</p>
+				</div>
+			</div>-->
+			<div class="project-financing project-nav">
+				<h2>融资项目</h2>
+				<p>
+					项目数：
+					<span>2</span>
+				</p>
+				<label>排序：</label>
+				<ul>
+					<li class="onlinetime">
+						<a href="">上线时间</a>
+					</li>
+					<li class="congre-amount">
+						<a href="">众筹金额</a>
+					</li>
+					<li class="attention">
+						<a href="">关注</a>
+					</li>
+					<li class="talkabout">
+						<a href="">约谈</a>
+					</li>
+					<li class="progress">
+						<a href="">众筹进度</a>
+					</li>
+				</ul>
+				<a class="more-r fr" href=""></a>
+				<a class="expanding fr" href=""></a>
+			</div>
+			<div class="project-financing project-box" id="project-container">
+				<% projects.forEach(function(data, index){ %>
+				<% if (data.state == 2 ) {  %>
+				<div class="pro-finacing clearfix">
+					<div class="financing-loading fl clearfix both-margin-<%=index%>">
+						<figure>
+							<a href="/dianpu?<%= data._id%>">
+								<img src="<%= data.logo %>">
+							</a>
+							<figcaption>
+								<a href="/dianpu?<%= data._id%>" class="h-100">
+									<h3>已筹资</h3>
+									<p>
+										<%=data.simpleDescription %>
+									</p>
+								</a>
+							</figcaption>
+						</figure>
+						<div class="finacing-title clearfix">
+							<a href="" class="fl"><%=data.remarkName %></a>
+						</div>
+						<div class="finacing-progress clearfix fl">
+							<div class="pro-bar bar-100 color-sun-flower animated progress" data-pro-bar-percent="<%= (data.raisedfunds/data.wholeMoney)*100%>" data-pro-bar-delay="300">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+						<p class="proPer fl per"><%= (data.raisedfunds/data.wholeMoney)*100%></p>
+						<p class="fl mar-10">%</p>
+						<div class="finacing-situation clearfix">
+							<div class="whole fl">
+								<span>融资金额</span>
+								<span>￥<%=data.wholeMoney%></span>
+							</div>
+							<div class="single fl">
+								<span>单笔投资</span>
+								<span class="per"><%=data.wholeMoney/data.buyParts%></span>
+							</div>
+							<div class="time fl">
+								<span>认购份数</span>
+								<span><%=data.buyParts%></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% } %>
+				<% }) %>
+			</div>
+			<div class="project-financing project-nav">
+				<h2>分红项目</h2>
+				<p>
+					项目数：
+					<span>31</span>
+				</p>
+				<a class="more-r fr" href=""></a>
+				<a class="expanding fr" href=""></a>
+			</div>
+			<div class="project-financing project-box" id="project-container">
+				<% projects.forEach(function(data, index){ %>
+				<% if (data.state == 4 ) {  %>
+				<div class="pro-finacing clearfix">
+					<div class="financing-loading fl clearfix both-margin-<%=index%>">
+						<figure>
+							<a href="/dianpu?<%= data._id%>">
+								<img src="<%= data.logo %>">
+							</a>
+							<figcaption>
+								<a href="/dianpu?<%= data._id%>" class="h-100">
+									<h3>已筹资</h3>
+									<p>
+										<%=data.simpleDescription %>
+									</p>
+								</a>
+							</figcaption>
+						</figure>
+						<div class="finacing-title clearfix">
+							<a href="" class="fl"><%=data.remarkName %></a>
+						</div>
+						<div class="finacing-progress clearfix fl">
+							<div class="pro-bar bar-100 color-sun-flower animated progress" data-pro-bar-percent="<%= (data.raisedfunds/data.wholeMoney)*100%>" data-pro-bar-delay="300">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+						<p class="proPer fl per"><%= (data.raisedfunds/data.wholeMoney)*100%></p>
+						<p class="fl mar-10">%</p>
+						<div class="finacing-situation clearfix">
+							<div class="whole fl">
+								<span>融资金额</span>
+								<span>￥<%=data.wholeMoney%></span>
+							</div>
+							<div class="single fl">
+								<span>单笔投资</span>
+								<span class="per"><%=data.wholeMoney/data.buyParts%></span>
+							</div>
+							<div class="time fl">
+								<span>认购份数</span>
+								<span><%=data.buyParts%></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% } %>
+				<% }) %>
+			</div>
+			<div class="project-financing project-nav">
+				<h2>预热项目</h2>
+				<p>
+					项目数：
+					<span>21</span>
+				</p>
+				<label>排序：</label>
+				<ul>
+					<li class="onlinetime">
+						<a href="">预计上线时间</a>
+					</li>
+					<li class="congre-amount">
+						<a href="">预热时间</a>
+					</li>
+					<li class="attention">
+						<a href="">关注</a>
+					</li>
+					<li class="talkabout">
+						<a href="">约谈</a>
+					</li>
+					<li class="progress">
+						<a href="">众筹总额</a>
+					</li>
+				</ul>
+				<a class="more-r fr" href=""></a>
+				<a class="expanding fr" href=""></a>
+			</div>
+			<div class="project-financing project-box" id="project-container">
+				<% projects.forEach(function(data, index){ %>
+				<% if (data.state == 1 ) {  %>
+				<div class="pro-finacing clearfix">
+					<div class="financing-loading fl clearfix both-margin-<%=index%>">
+						<figure>
+							<a href="/dianpu?<%= data._id%>">
+								<img src="<%= data.logo %>">
+							</a>
+							<figcaption>
+								<a href="/dianpu?<%= data._id%>" class="h-100">
+									<h3>已筹资</h3>
+									<p>
+										<%=data.simpleDescription %>
+									</p>
+								</a>
+							</figcaption>
+						</figure>
+						<div class="finacing-title clearfix">
+							<a href="" class="fl"><%=data.remarkName %></a>
+						</div>
+						<div class="finacing-progress clearfix fl">
+							<div class="pro-bar bar-100 color-sun-flower animated progress" data-pro-bar-percent="<%= (data.raisedfunds/data.wholeMoney)*100%>" data-pro-bar-delay="300">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+						<p class="proPer fl per"><%= (data.raisedfunds/data.wholeMoney)*100%></p>
+						<p class="fl mar-10">%</p>
+						<div class="finacing-situation clearfix">
+							<div class="whole fl">
+								<span>融资金额</span>
+								<span>￥<%=data.wholeMoney%></span>
+							</div>
+							<div class="single fl">
+								<span>单笔投资</span>
+								<span class="per"><%=data.wholeMoney/data.buyParts%></span>
+							</div>
+							<div class="time fl">
+								<span>认购份数</span>
+								<span><%=data.buyParts%></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% } %>
+				<% }) %>
+			</div>
+			<div class="project-financing project-nav">
+				<h2>成功项目</h2>
+				<p>
+					项目数：
+					<span>162</span>
+				</p>
+				<label>排序：</label>
+				<ul>
+					<li class="onlinetime">
+						<a href="">上线时间</a>
+					</li>
+					<li class="congre-amount">
+						<a href="">众筹金额</a>
+					</li>
+					<li class="attention">
+						<a href="">关注</a>
+					</li>
+					<li class="talkabout">
+						<a href="">约谈</a>
+					</li>
+					<li class="progress">
+						<a href="">成功用时</a>
+					</li>
+				</ul>
+				<a class="more-r fr" href=""></a>
+				<a class="expanding fr" href=""></a>
+			</div>
+			<div class="project-financing project-box" id="project-container">
+				<% projects.forEach(function(data, index){ %>
+				<% if (data.state == 3 ) {  %>
+				<div class="pro-finacing clearfix">
+					<div class="financing-loading fl clearfix">
+						<figure>
+							<a href="/dianpu?<%= data._id%>">
+								<img src="<%= data.logo %>">
+							</a>
+							<figcaption>
+								<a href="/dianpu?<%= data._id%>" class="h-100">
+									<h3>已筹资</h3>
+									<p>
+										<%=data.simpleDescription %>
+									</p>
+								</a>
+							</figcaption>
+						</figure>
+						<div class="finacing-title clearfix">
+							<a href="" class="fl"><%=data.remarkName %></a>
+						</div>
+						<div class="finacing-progress clearfix fl">
+							<div class="pro-bar bar-100 color-sun-flower animated progress" data-pro-bar-percent="<%= (data.raisedfunds/data.wholeMoney)*100%>" data-pro-bar-delay="300">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+						<p class="proPer fl per"><%= (data.raisedfunds/data.wholeMoney)*100%></p>
+						<p class="fl mar-10">%</p>
+						<div class="finacing-situation clearfix">
+							<div class="whole fl">
+								<span>融资金额</span>
+								<span>￥<%=data.wholeMoney%></span>
+							</div>
+							<div class="single fl">
+								<span>单笔投资</span>
+								<span class="per"><%=data.wholeMoney/data.buyParts%></span>
+							</div>
+							<div class="time fl">
+								<span>认购份数</span>
+								<span><%=data.buyParts%></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% } %>
+				<% }) %>
+			</div>
+			<div class="step-draw">
+				<img src="/img/step-img.gif">
+			</div>
+			<div class="dreamy">
+				<div class="dream-now1 dream"></div>
+				<div class="dream-now2 dream">
+					<div class="dream-enter">
+						<a href="">发起我的梦想</a>
+					</div>
+				</div>
+				<div class="dream-now3 dream"></div>
+				<div class="dream-now4 dream"></div>
+			</div>
+
+		</div>
+			<% include footer %>
+		</div>
+		<div class="md-overlay"></div>
+	</div>
+	<script src="js/classie.js"></script>
+	<script src="js/modalEffects.js"></script>
+		<script>
+		$(function () {
+			var $upper = $('#upper');
+
+			$('#images').refineSlide({
+				transition : 'random',
+				onInit : function () {
+					var slider = this.slider,
+					$triggers = $('.translist').find('> li > a');
+				}
+			});
+		});
+		</script>
+	<script type="text/javascript">
+	// $(document).ready(function() {
+	// 	var userEmail = $('#useremail').val();
+	// 	var userPsd = $('#userpsd').val();
+	// 	$('#findPsd').click(function() {
+	// 		alert(userEmail);console.log(userEmail);
+	// 		$.ajax({
+	// 			url: '/findPassword',
+	// 			type: 'post',
+	// 			data: {
+	// 				useremail: userEmail,
+	// 				userpsd: userPsd
+	// 			},
+	// 			dataType: 'json',
+	// 			success: function (data) {
+
+	// 				if (!data.isChecked) {
+	// 					alert('种植成功！');
+	// 				}
+	// 				else {
+	// 					location.href= '/users';
+	// 				}
+	// 			}
+	// 		})
+	// 	})
+	// });
+	</script>
+</body>
+</html>

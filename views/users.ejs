@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="js no-touch">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src = "/js/users.js"></script>
+</head>
+<body>
+    <div class="users">
+        <div class="md-modal md-effect-18" id="modal-18">
+            <div class="md-content">
+                <div class="update">
+                    <form action="updateusersifo" method = 'post' enctype="multipart/form-data">
+                        <div class="title clearfix">
+                            <p class="ifoTitle fl">个人信息</p>
+                            <a id="hide" class="close fr md-close">X</a>
+                        </div>
+                        <div class="inputIfo">
+                            <p> 
+                                <label>邮箱：</label><input type="text" class="input-w250" name="email" value="<%=email%>">
+                            </p> 
+                            <p>
+                                <label>用户名：</label><input type="text" class="input-w250" name="name" value="<%=username%>">
+                            </p>
+                            <p>
+                                <label>手机号：</label><input type="text" class="input-w250" name="phone" value="<%=phone%>">
+                            </p>
+                            <p>
+                                <label>密码：</label><input type="text" class="input-w250" name="password" value="<%=password%>">
+                            </p>
+                            <p>
+                                <input type="file" class="input-w250" name="personimg" required>
+                            </p>
+                        </div>
+                        <div class="below">
+                            <input type="submit" class="btn btn-w100 btn-gray">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <% include header %>
+            <div class="content">
+                <div class="userMsg clearfix">
+                    <span class="default fl">
+                        <img src="<%=img%>">
+                    </span>
+                    <div class="person fl">
+                        <span class="name fl" id="privname"><%=username%></span>
+                        <span class="msg fr">信息完整程度:</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <b>0</b>
+                            <p><a href="">关注</a></p>
+                        </li>
+                        <li>
+                            <b>0</b>
+                            <p><a href="">约谈</a></p>
+                        </li>
+                        <li>
+                            <b>0</b>
+                            <p><a href="">投资</a></p>
+                        </li>
+                        <li class="moneyMag">
+                            请在
+                            <a href=""><strong>资金管理</strong></a>
+                            中认证投资人并且同步易宝注册！
+                        </li>
+                    </ul>
+                    <div class="btn-wrapper fr">
+                        <button id="edit" class="btn btn-yellow btn-w100 md-trigger md-setperspective" data-modal="modal-18">编辑个人信息</button>
+                        <button class="btn btn-red btn-w100">投资人认证</button>
+                    </div>
+                    <p class="star fl">
+                        <span>投资星级：</span>
+                        <span>无</span>
+                    </p>
+                </div>
+                <div class="shop-wrapper clearfix">
+                    <ul class="fl">
+                        <li>
+                            <a href="void:javascript(0)" class='toggle'>
+                                <i class="tip-icon shop"></i>
+                                <span>店铺</span>
+                                <i class="tip-icon arrow-down fr"></i>
+                            </a>
+                            <dl>
+                                <dd id="pilotpub">
+                                    <a href="void:javascript(0)">
+                                        <span>提交的店铺</span>
+                                        <i class="tip-icon arrow-right"></i>
+                                    </a>
+                                </dd>
+                                <dd id="pilotinv">
+                                    <a href="void:javascript(0)">
+                                        <span>投资的店铺</span>
+                                        <i class="tip-icon arrow-right"></i>
+                                    </a>
+                                </dd>
+                                <!--<dd>
+                                    <a href="">
+                                        <span>约谈的店铺</span>
+                                        <i class="tip-icon arrow-right"></i>
+                                    </a>
+                                </dd>
+                                <dd>
+                                    <a href="">
+                                        <span>关注的店铺</span>
+                                        <i class="tip-icon arrow-right"></i>
+                                    </a>
+                                </dd>
+                                <dd>
+                                    <a href="">
+                                        <span>预约的店铺</span>
+                                        <i class="tip-icon arrow-right"></i>
+                                    </a>
+                                </dd>-->     
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="tip-icon money"></i>
+                                <span>资金管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="tip-icon action"></i>
+                                <span>动态（0）</span>
+                                <i class="tip-icon arrow-down fr"></i>
+                            </a>
+                            <dl>
+                                <dd>
+                                    <a href="">
+                                        <span>我的动态</span>
+                                        <i class="tip-icon arrow-right"></i>
+                                    </a>
+                                </dd>
+                                <dd>
+                                    <a href="">
+                                        <span>我关注的动态</span>
+                                        <i class="tip-icon arrow-right"></i>
+                                    </a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="tip-icon comment"></i>
+                                <span>评论（0）</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="tip-icon fans"></i>
+                                <span>粉丝（0）</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="tip-icon care"></i>
+                                <span>关注（0）</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="info fl isshow" id="published-box" >
+                       
+                    </div>
+                    <div class="info fl isshow" id="invested-box">
+                        <%for (var i = 0; i < projects.length; i++) {%>
+                            <div class="invested">
+                            <img src="<%=projects[i].logo%>"/>
+                            <div class="publup">
+                                <p class="pname"><%=projects[i].remarkName%></p>
+                                <p class="updata">
+                                    <a href="dianpu?id=<%=projects[i]._id%>">详情|</a>
+                                </p>
+                            </div>
+                            <div class="publdown">
+                                <p>地区：<%=projects[i].province%></p>
+                                <p>行业：<%=projects[i].type%></p>
+                            </div>
+                            </div>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+
+            <% include footer %>
+        </div>
+        <div class="md-overlay"></div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#edit').click(function() {
+            $('.update').show();
+        });
+        $('#hide').click(function() {
+            $('.update').hide();
+        });
+        $('.toggle').each(function() {
+            $(this).click(function() {
+                $(this).next('dl').toggle();
+            })
+        });
+        $('#pilotpub').click(function() {
+            $("#published-box").removeClass('isshow');
+            $("#invested-box").addClass('isshow');
+        });
+        $('#pilotinv').click(function() {
+            $("#invested-box").removeClass('isshow');
+            $("#published-box").addClass('isshow');
+        });
+    });
+    
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/modalEffects.js"></script>
+</body>
+</html>

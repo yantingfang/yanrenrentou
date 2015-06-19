@@ -1,0 +1,448 @@
+.dianpu{
+	background:#fff;
+    .md-modal{
+        background:#5dac81;
+        height: 400px;
+        .title{
+            padding:15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .inputIfo{
+            padding:50px 90px;
+            p{
+                padding-bottom:20px;
+                label{
+                    font-size: 20px;
+                }
+            }
+        }
+        .below{
+            margin-left:180px;
+        }
+    }
+	.header-wrapper{
+        height: 90px;
+        background: #292c3c;
+        .nav{
+            padding: 20px 0 0 40px;
+            span{
+                color: #fff;
+                padding-top: 20px;
+                @include inline-block;
+            }
+            .country{
+                font-size: 16px;
+                text-decoration: underline;
+            }
+            .change-city{
+                font-size: 14px;
+                margin-left: 10px;
+            }
+            .investment-project{
+                @include inline-block;
+                vertical-align: top;
+                background: url(/img/tips.png) no-repeat -14px -22px;
+                width: 55px;
+                height: 46px;
+                margin: 8px 10px 0 10px;
+                &:hover{
+                    background: url(/img/tips.png) no-repeat -77px -22px;
+                }
+            }
+            .search-project{
+                @include inline-block;
+                margin-left: 110px;
+                padding-top: 20px;
+                .search-text{
+                    @include border-corner-radius(top, right, 0);
+                    @include border-corner-radius(bottom, right, 0);
+                    background: #ccc;
+                }
+                .submit{
+                    background: url(/img/searchBtn.gif) no-repeat;
+                    width: 25px;
+                    height: 30px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        .header-right{
+            float: right;
+            margin-top: 22px;
+            padding-bottom: 39px;
+            position: relative;
+            &:hover{
+                .dropdown{
+                    display: block;
+                }
+            }
+            div{
+                margin-left: 15px;
+                @include inline-block;
+                cursor: pointer;
+                .vip{
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 5px;
+                    @include border-radius(13px);
+                    background: url(/img/vip.png) no-repeat;
+                }
+                .message{
+                    width: 27px;
+                    height: 25px;
+                    margin-bottom: 2px;
+                    background: url(/img/message.gif) no-repeat;
+                }
+                span{
+                    display: block;
+                }
+                a{
+                    display: block;
+                    color: #fff;
+                    font-size: 14px;
+                    .msg-num{
+                        display: inline;
+                        color: #e45432;
+                    }
+                }
+            }
+            .dropdown{
+                display: none;
+                margin: 0;
+                position: absolute;
+                margin-top: 17px;
+                left: -50px;
+                z-index: 999;
+                background: #303030;
+                @include border-corner-radius(bottom, left, 5px);
+                @include border-corner-radius(bottom, right, 5px);
+                ul{
+                    padding: 5px;
+                    li{
+                        padding: 10px;
+                        border-bottom: 1px solid #3c3c3c;
+                        a{
+                            width: 185px;
+                            color: #fff;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            &:hover{
+                                color: #db4f33;
+                            }
+                            img{
+                                @include inline-block;
+                                padding-right: 5px;
+                                margin-top: 2px;
+                            }
+                            span{
+                                @include inline-block;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+    .content-bg{
+    	min-width:1300px;
+    	padding-top:325px;
+    	//background:url(/img/dianpu/liuzi-img.jpg) no-repeat;
+        //background-position:50% 0;
+        .shade-img{
+        	position:absolute;
+        	width: 100%;
+        	height: 200px;
+        	top:390px;
+        	z-index: 1;
+        	background:url(/img/img-shade.png) no-repeat;
+        }
+        .content{
+        	position: relative;
+        	width: 1000px;
+        	margin: 0 auto;
+        	z-index: 2;
+        	.content-left{
+        		width: 650px;
+        		
+        		background:#fff;
+        		border:1px solid #cbd2d6;
+        		.left-tit{
+        			margin-bottom:20px;
+        			padding:20px 0 0 20px;
+        			 h2{
+                            @include inline-block;
+                            font-size: 18px;
+                            color: #000;
+                    }
+                    .oneword{
+                            @include inline-block;
+                            font-size: 18px;
+                            color: #000;
+                    }
+        			.author{
+        				padding:10px;
+        				font-size: 14px;
+        				color: #797979;
+        				.author-lay{
+        					color: #fff;
+        					background:#ec4911;
+        					font-size: 12px;
+        					padding:1px 5px;
+        					text-align: center;
+        				}
+        				.name{
+        					color: #000;
+        					
+        				}
+        				span{
+        					padding:5px 10px;
+        				}
+        			}
+        		}
+        		.tab-content{
+        			border-bottom:3px solid #000;
+        			width: 625px;
+        			padding-left:20px;
+        			margin-top: 25px;
+        			ul{
+        				li{
+        					float: left;
+        					width: 110px;
+        					height: 40px;
+        					text-align: center;
+        					line-height: 40px;
+        					font-size: 16px;
+        					background:#e5e5e5;
+        					color: #666;
+        					margin-right: 3px;
+        				}
+        			}
+        		}
+                .shop-profile{
+                    .risk-tip{
+                        border-bottom:1px solid #e6e6e6;
+                        padding:20px 0;
+                        h4{
+                            font-size: 18px;
+                            color: #404040;
+                            font-weight: bold;
+                            padding:0 0 8px 22px;
+                        }
+                        em{
+                            @include inline-block;
+                            width: 600px;
+                            margin:0 25px;
+                            font-size: 14px;
+                            text-indent: 2em;
+                            line-height: 30px;
+                            font-style: normal;
+                        }
+                    }
+                    .buy-process-box{
+                        border-bottom:1px solid #e6e6e6;
+                        padding:20px 0;
+                        h4{
+                            font-size: 18px;
+                            color: #404040;
+                            font-weight: bold;
+                            padding:0 0 8px 22px;
+                        }
+                        .buy-process{
+                            width: 500px;
+                            margin:0 75px;
+                            ul{
+                                margin-top: 20px;
+                                li{
+                                    overflow: hidden;
+                                    .process-ul-li{
+                                        width: 200px;
+                                        height: 62px;
+                                        float:left;
+                                        border:1px solid #ff6666;
+                                        b{
+                                            display: block;
+                                            line-height: 32px;
+                                            text-align: center;
+                                            font-size: 18px;
+                                            color: #4c4c4c;
+                                            font-weight: bold;
+                                        }
+                                        span{
+                                            color: #fff;
+                                            display: block;
+                                            line-height: 32px;
+                                            background:#ff6666;
+                                            text-align: center;
+                                        }
+                                    }
+                                    p{
+                                        width: 270px;
+                                        float: left;
+                                        margin-top:20px;
+                                        font-size: 16px;
+                                        padding-left:20px;
+                                        color: #000;
+                                    }
+                                    img{
+                                        margin-left: 100px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .project-introduction{
+                        border-bottom:1px solid #e6e6e6;
+                        padding:20px 0;
+                        h4{
+                            font-size: 18px;
+                            color: #404040;
+                            font-weight: bold;
+                            padding:0 0 8px 22px;
+                        }
+                        .project-introduction-detail{
+                            img{
+                                display: block;
+                                width: 600px;
+                                height: 380px;
+                                margin-left:25px;;
+                            }
+                            text-indent:2em;
+                        }
+                    }
+                }
+        	}
+        	.content-right{
+        		width: 325px;
+        		background:#fff;
+        		border:1px solid #cbd2d6;
+        		.attention-ul{
+                    overflow: hidden;
+                    padding-top:17px;
+                    border-bottom: 1px solid #e6e6e6;
+                    li{
+                        background:#ff6666;
+                        width: 120px;
+                        padding-top:10px;
+                        height: 30px;
+                        margin: 0 20px;
+                        float: left;
+                        color: #fff;
+                        font-size: 16px;
+                        text-align: center;
+                        .attention-img{
+                            @include inline-block;
+                            width: 18px;
+                            height: 16px;
+
+                            background:url(/img/attention.png) no-repeat;
+                        }
+                    }
+                }
+                .initiator{
+                    border-bottom:1px solid #e6e6e6;
+                    .initiator-img{
+                        width: 300px;
+                        margin: 0 auto;
+                        padding-top:40px;
+                        margin-bottom:30px;
+                        img{
+                            margin-left:20px;
+                            width: 100px;
+                            height: 100px;
+                            background:#eeeeee;
+                        }
+                        .initiator-per{
+                            @include inline-block;
+                            vertical-align: top;
+                            padding-top:50px;
+                            padding-left:20px;
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        color: #4c4c4c;
+                        font-weight: bold;
+                        margin-left: 20px;
+                    }
+                }
+                .finan-rate{
+                    .offter-to-buy{
+                        padding-left: 30px;
+                        margin:20px 0;
+                        .of-a{
+                            color: #4c4c4c;
+                            font-size: 14px;
+                            padding-bottom: 10px;
+                        }
+                        .p-state{
+                            .num-sta{
+                                font-size: 30px;
+                                color: #404040;
+                            }
+                            .text-sta{
+                                font-size: 16px;
+                                color: #ff6666;
+                                margin-left: 30px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .bar{
+                        width: 260px;
+                        margin: 0 auto;
+                        height: 8px;
+                        border:1px solid #c8c8c8;
+                        background:#e5e5e5;
+                        p{
+                            width: 20%;
+                            height: 8px;
+                            background:url(/img/progress_bar_ing_now.gif);
+                        }
+                    }
+                    .fin-contri{
+                        width: 260px;
+                        margin: 0 auto;
+                        padding-top:8px;
+                        font-size:14px;
+                        color: #4c4c4c;
+                    }
+                    .finan-state{
+                        width: 260px;
+                        height: 55px;
+                        margin: 30px auto;
+                        text-align: center;
+                        line-height: 55px;
+                        background:#ff6666;
+                        color: #fff;
+                        font-size: 30px;
+                    }
+                }
+                .trends{
+                    .new-trend{
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #4c4c4c;
+                        padding-left:20px;
+                    }
+                    .trend-ul{
+                        width: 260px;
+                        margin: 20px auto;
+                        padding-top:50px;
+                        background:url(/img/up_errow.jpg) no-repeat 0 0;
+                        li{
+                            padding-left:54px;
+                            font-size: 14px;
+                            color: #4c4c4c;
+                            padding-bottom:32px;
+                            background:url(/img/pro-down.jpg) no-repeat 3px 0;
+                        }
+                    }
+                }
+        	}
+        }
+    }
+}

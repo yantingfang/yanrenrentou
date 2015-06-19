@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/bin/www" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/models/db.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/jquery-1.11.2.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/sass/cusmanage/_homepage.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/sass/cusmanage/_index.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/sass/cusmanage/_login.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/sass/cusmanage/_register.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/sass/dpl/_btn.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/sass/dpl/_input.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/sass/style.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/static/js/jquery-2.1.3.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/routes/users.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/layout.jade" charset="UTF-8" />
+  </component>
+</project>

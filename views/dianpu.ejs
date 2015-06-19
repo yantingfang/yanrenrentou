@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>renrentou</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <script type="text/javascript" src="/static/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="/js/dianpu.js"></script>
+</head>
+<body>
+	<div class="dianpu">
+        <div class="md-modal md-effect-18" id="modal-18">
+            <div class="md-content">
+                <div class="update">
+                    <form action="financialnum" method = 'post' enctype="multipart/form-data">
+                        <input type="hidden" name="proid" id='proid'>
+                        <div class="title clearfix">
+                            <p class="ifoTitle fl">请选择你的出资额：</p>
+                            <a id="hide" class="close fr md-close">X</a>
+                        </div>
+                        <div class="inputIfo">
+                            <p>
+                                <label>出资份数：</label><input type="number" min="1" max="<%=project.buyParts%>" class="input-w250" name="parts" id="parts"required>
+                            </p>
+                            <p>
+                                <label>出资数量：</label><input type="text" class="input-w250" name="numplus"id="numplus" value="<%=(project.wholeMoney-project.pubMoney)/project.buyParts%>"required>
+                            </p>
+                        </div>
+                        <div class="below">
+                            <input type="submit" class="btn btn-w100 btn-gray">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+		<% include header %>
+        <div class="content-bg" style="background:url(<%= project.background %>) no-repeat;background-position:50% 0;">
+        	<div class="shade-img"></div>
+        	<div class="content clearfix">
+        		<div class="content-left fl">
+        			<div class="left-tit">
+        				<h2 id="title-pro">【<%= project.remarkName %>】</h2>
+                        <span class="oneword"><%= project.simpleDescription %></span>
+        				<div class="author">
+        					<span class="author-lay">发起人：</span>
+        					<span class="name"><%= project.issuer%></span>
+        					<span><%= project.province %></span>
+        					<span>行业：<span><%= project.type %></span></span>
+        				</div>
+        			</div>
+        			<div class="tab-content clearfix">
+        				<ul>
+        					<li><a href="">店铺简介</a></li>
+        					<li><a href="">预算及退出</a></li>
+        					<li><a href="">融资互动</a></li>
+        					<li><a href="">电子协议</a></li>
+        				</ul>
+        			</div>
+                    <!--店铺简介-->
+                    <div class="shop-profile">s
+                        <div class="risk-tip">
+                            <h4>风险提示：</h4>
+                            <em>
+                                请您认购前下载此项目《合伙协议》，本协议内容为最终签约版，协议中的条款、数值、比例均已确定（不予修改），请您下载后认真阅读，确认并知晓股权众筹（无保本）投资风险，认购及认同本协议内容。认购后您将不能更改投资人姓名，也不能代他人认购和转让他人，只以您在人人投平台身份认证时提交的身份证为准进行投资合同文本签署和工商注册办理，如认购后申请退出，需支付相应反悔金，请勿相信任何非人人投官方对外公布的承诺或非官方发布的协议。对此，人人投将不承担任何法律责任，如需核实信息请拨打官方客服电话：400-070-5286.
+                            </em>
+                        </div>
+                        <div class="buy-process-box">
+                            <h4>认购流程：</h4>
+                            <div class="buy-process clearfix">
+                                <ul>
+                                    <li>
+                                        <div class="process-ul-li">
+                                            <b>项目方</b>
+                                            <span>(发布项目)</span>
+                                        </div>
+                                        <p>项目方登录人人投平台提交项目资料</p>
+                                    </li>
+                                    <li>
+                                        <img src="/img/process.jpg">
+                                    </li>
+                                    <li>
+                                        <div class="process-ul-li">
+                                            <b>人人投</b>
+                                            <span>(项目审核)</span>
+                                        </div>
+                                        <p>对每一个项目进行真实性、可行性审核，并实地进行考察</p>
+                                    </li>
+                                    <li>
+                                        <img src="/img/process.jpg">
+                                    </li>
+                                    <li>
+                                        <div class="process-ul-li">
+                                            <b>投资人</b>
+                                            <span>(项目融资)</span>
+                                        </div>
+                                        <p>认证投资人后可以认购融资项目，认购资金冻结在自己的易宝账户</p>
+                                    </li>
+                                    <li>
+                                        <img src="/img/process.jpg">
+                                    </li>
+                                    <li>
+                                        <div class="process-ul-li">
+                                            <b>投资人</b>
+                                            <span>(项目放款)</span>
+                                        </div>
+                                        <p>项目方通过人人投申请冻结资金，用于提现进行项目开支</p>
+                                    </li>
+                                    <li>
+                                        <img src="/img/process.jpg">
+                                    </li>
+                                    <li>
+                                        <div class="process-ul-li">
+                                            <b>项目方</b>
+                                            <span>(资金申请)</span>
+                                        </div>
+                                        <p>项目方通过人人投申请冻结资金，用于提现进行项目开支</p>
+                                    </li>
+                                    <li>
+                                        <img src="/img/process.jpg">
+                                    </li>
+                                    <li>
+                                        <div class="process-ul-li">
+                                            <b>人人投</b>
+                                            <span>(资金审核)</span>
+                                        </div>
+                                        <p>人人投对项目方的资金申请，进行分站、主站双重审核</p>
+                                    </li>
+                                    <li>
+                                        <img src="/img/process.jpg">
+                                    </li>
+                                    <li>
+                                        <div class="process-ul-li">
+                                            <b>人人投</b>
+                                            <span>(财务监管)</span>
+                                        </div>
+                                        <p>人人投财务监管系统为投资人项目全面服务，实现财务透明公开化</p>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="project-introduction">
+                            <h4>项目介绍：</h4>
+                            <div class="project-introduction-detail" id="codebox">
+                            </div>
+                        </div>
+
+                    </div>
+        		</div>
+        		<div class="content-right fr">
+                    <ul class="attention-ul">
+                        <li>
+                            <span class="attention-img"></span>
+                            <span>已关注</span>
+                            <span id="attention-num">(34)</span>
+                        </li>
+                        <li>收益计算器</li>
+                    </ul>
+                    <div class="initiator">
+                        <div class="initiator-img">
+                            <img src="<%= imageper%>"/>
+                            <p class="initiator-per">发起人：<%= project.issuer%></p>
+                        </div>
+                        <p>
+                            <span>项目地点：</span>
+                            <span><%= project.province %></span>
+                        </p>
+                        <p>
+                            <span>一句话介绍：</span>
+                            <span><%= project.simpleDescription %></span>
+                        </p>
+                    </div> 
+                    <div class="finan-rate">
+                        <div class="offter-to-buy">
+                            <p class="of-a">已认购资金：</p>
+                            <p class="p-state">
+                                <span class="num-sta">￥<%= project.raisedfunds %></span>
+                                <%if(project.state=="1"){%><span class="text-sta">预热中</span><%}%>
+                                <%if(project.state=="2"){%><span class="text-sta">融资中</span><%}%>
+                                <%if(project.state=="3"){%><span class="text-sta">已成功</span><%}%>
+                                <%if(project.state=="4"){%><span class="text-sta">已分红</span><%}%>
+                                    
+                            </p>
+                        </div>
+                        <div class="bar">
+                            <p style="width:<%=project.raisedfunds/(project.wholeMoney-project.pubMoney)*100%>%"></p>
+                        </div>
+                        <div class="fin-contri clearfix">
+                            <p class="ll fl">
+                                融资总额<br/>
+                                ￥<%= project.wholeMoney-project.pubMoney %>
+                            </p>
+                            <p class="rr fr">
+                                项目方出资<br>
+                                ￥<%= project.pubMoney %>
+                            </p>
+                        </div>
+                        <div class="finan-state">
+                            <%if(project.state=="1"){%><button class="btn btn-w100" data-modal="modal-18">预热中</button><%}%>
+                            <%if(project.state=="2"){%><span class="text-sta"><button id="edit" class="btn btn-yellow btn-w100 md-trigger md-setperspective" data-modal="modal-18">出资</button></span><%}%>
+                            <%if(project.state=="3"){%><button class="btn btn-w100" data-modal="modal-18">已成功</button><%}%>
+                            <%if(project.state=="4"){%><button class="btn btn-w100" data-modal="modal-18">已分红</button><%}%>
+                                 
+                            
+                        </div>
+                    </div>
+                    <div class="trends">
+                        <div class="new-trend">最新动态：</div>
+                        <%if(project.state=="1"){%><ul class="trend-ul">
+                            <li>预热中</li>
+                        </ul><%}%>
+                        <%if(project.state=="2"){%><ul class="trend-ul">
+                            <li>融资中</li>
+                            <li>预热中</li>
+                        </ul><%}%>
+                        <%if(project.state=="3"){%><ul class="trend-ul">
+                            <li>已成功</li>
+                            <li>融资中</li>
+                            <li>预热中</li>
+                        </ul><%}%>
+                        <%if(project.state=="4"){%><ul class="trend-ul">
+                            <li>已分红</li>
+                            <li>已成功</li>
+                            <li>融资中</li>
+                            <li>预热中</li>
+                        </ul><%}%>
+                    </div>
+                </div>
+        	</div>
+        </div>
+	</div>
+    <% include footer %>
+    
+    <script src="/js/classie.js"></script>
+    <script src="/js/modalEffects.js"></script>
+</body>
+</html>
